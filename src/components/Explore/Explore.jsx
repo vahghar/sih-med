@@ -63,7 +63,7 @@ const Explore = () => {
               </div>
               <div style={{ marginTop: '5px', fontSize: '15px' }}>
                 <a
-                  href="http://localhost:5174/search/tulsi/stats"
+                  href="https://global-herb.vercel.app/search/tulsi/stats"
                   rel="noopener noreferrer"
                   className="text-white underline"
                 >
