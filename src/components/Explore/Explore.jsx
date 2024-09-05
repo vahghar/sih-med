@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
-import plant_1 from "../../assets/tulsi-plant.png";
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+import Model from '../../../public/tulsi_plant/Scene'; // Adjust import as needed
 import plant_bg from "../../assets/tulsi-big-bg.png";
+import { useThree } from '@react-three/fiber';
 
 const Explore = () => {
   const [expanded, setExpanded] = useState(false);
   const handleExpand = () => {
     setExpanded(!expanded);
+  };
+  const TopDownCamera = () => {
+    const { camera } = useThree();
+    camera.position.set(2, 5, 4); // Position the camera above the model
+    camera.lookAt(0, 0, 0); // Look at the center of the scene
+    return null;
   };
 
   return (
@@ -24,11 +33,15 @@ const Explore = () => {
           className={`absolute ${expanded ? 'top-4 right-8 w-48 h-48' : 'top-4 right-8 w-64 h-64'} p-0 border-0 bg-transparent cursor-pointer transition-all duration-300 ease-in-out z-20`}
           aria-label="Expand/Collapse Image"
         >
-          <img
-            src={plant_1}
-            alt="Plant"
-            className="ml-12 w-full h-full object-cover"
-          />
+          <div className="w-full h-full">
+            <Canvas className="w-full h-full">
+              <TopDownCamera/>
+              <OrbitControls />
+              <ambientLight intensity={0.5} />
+              <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+              <Model scale={3} /> {/* Adjust the model scale here */}
+            </Canvas>
+          </div>
         </button>
 
         <textarea

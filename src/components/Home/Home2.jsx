@@ -1,7 +1,8 @@
 import { useState, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
-import Scene from "../../../public/Scene.jsx";
+//import Scene from "../../../public/Scene.jsx";
+import Model from "../../../public/globe/Scene";
 
 const Home2 = () => {
   return (
@@ -12,7 +13,7 @@ const Home2 = () => {
         <ambientLight />
         <OrbitControls />
         <Suspense fallback={null}>
-          <Scene />
+          <Model />
         </Suspense>
         <Environment preset="sunset" />
       </Canvas>
