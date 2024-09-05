@@ -13,7 +13,7 @@ import { useGLTF } from '@react-three/drei'
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/tulsi_plant/scene.gltf')
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={4}>
       <group position={[-0.004, -0.271, 0]} scale={0.011}>
         <mesh geometry={nodes.Object_8.geometry} material={materials.TULSI_TREE_BARK} />
         <mesh geometry={nodes.Object_9.geometry} material={materials['tulsi-removebg-preview']} />
