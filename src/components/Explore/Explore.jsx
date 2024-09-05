@@ -3,6 +3,7 @@ import { Canvas, useThree } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Model from '../../../public/tulsi_plant/Scene'; // Adjust import as needed
 import plant_bg from "../../assets/tulsi-big-bg.png";
+import { useNavigate } from 'react-router-dom';
 
 const Explore = () => {
   const [expanded, setExpanded] = useState(false);
@@ -59,6 +60,15 @@ const Explore = () => {
                 <p style={{ fontWeight: 'lighter', marginTop: '0.5rem' }}>
                   Tulsi is renowned for its adaptogenic properties, helping the body adapt to stress and restore balance. It is rich in antioxidants and has anti-inflammatory, antiviral, and antibacterial properties. It can be used to treat respiratory conditions such as asthma, bronchitis, and the common cold. It also aids in managing diabetes by regulating blood sugar levels, and supports heart health by reducing blood pressure and cholesterol levels. Additionally, it is known to boost immunity, improve digestion, and alleviate skin conditions like acne and eczema. Its ability to detoxify the body and protect against infections makes it a powerful natural remedy in holistic health practices.
                 </p>
+              </div>
+              <div style={{ marginTop: '5px', fontSize: '15px' }}>
+                <a
+                  href="http://localhost:5174/search/tulsi/stats"
+                  rel="noopener noreferrer"
+                  className="text-white underline"
+                >
+                  Medicinal stats
+                </a>
               </div>
             </div>
           ) : (

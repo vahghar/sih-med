@@ -12,6 +12,7 @@ import Home2 from "./components/Home/Home2";
 import { HomeModernIcon } from "@heroicons/react/24/outline";
 import HomeNew from "./components/newHome/HomeNew";
 import Practice from "./components/practice/Practice";
+import Stats from "./components/stats/Stats";
 
 function App() {
   const user = useSelector((state) => state?.auth?.user);
@@ -40,6 +41,9 @@ function App() {
 
         <Route path="/private-help" element={
           <Practice/>
+        }/>
+        <Route path="/search/tulsi/stats" element={
+          <Stats/>
         }/>
       </Routes>
     </BrowserRouter>
