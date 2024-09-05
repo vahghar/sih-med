@@ -1,7 +1,6 @@
 import { useState, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
-//import Scene from "../../../public/Scene.jsx";
 import Model from "../../../public/globe/Scene";
 
 const Home2 = () => {
@@ -13,7 +12,7 @@ const Home2 = () => {
         <ambientLight />
         <OrbitControls />
         <Suspense fallback={null}>
-          <Model />
+          <Model/> {/* Adjust position to move model left */}
         </Suspense>
         <Environment preset="sunset" />
       </Canvas>
