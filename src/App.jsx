@@ -13,6 +13,7 @@ import { HomeModernIcon } from "@heroicons/react/24/outline";
 import HomeNew from "./components/newHome/HomeNew";
 import Practice from "./components/practice/Practice";
 import Stats from "./components/stats/Stats";
+import Login from "./components/login/Login";
 
 function App() {
   const user = useSelector((state) => state?.auth?.user);
@@ -44,6 +45,9 @@ function App() {
         }/>
         <Route path="/search/tulsi/stats" element={
           <Stats/>
+        }/>
+        <Route path="/login" element={
+          <Login/>
         }/>
       </Routes>
     </BrowserRouter>

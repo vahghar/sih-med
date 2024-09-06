@@ -81,7 +81,7 @@ export default function PublicNavbar() {
 
               <div className="flex-shrink-0">
                 <NavLink
-                  to="/getInTouch"
+                  to="/login"
                   className={({ isActive }) =>
                     `relative ml-2 inline-flex items-center gap-x-1.5 rounded-[4rem] border ${isActive
                       ? 'bg-green-600 text-white border-green-600'
