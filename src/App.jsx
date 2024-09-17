@@ -8,12 +8,12 @@ import PrivateNavbar from "./components/Navbar/PrivateNavbar";
 import LandingPage from "./components/Landing/LandingPage";
 import Search from "./components/Search/Search";
 import Explore from "./components/Explore/Explore";
-import Home2 from "./components/Home/Home2";
+import Home2 from "./components/Globe/Home2";
 import { HomeModernIcon } from "@heroicons/react/24/outline";
 import HomeNew from "./components/newHome/HomeNew";
-import Practice from "./components/practice/Practice";
 import Stats from "./components/stats/Stats";
 import Login from "./components/login/Login";
+import Practice from "./components/practice/Practice";
 
 function App() {
   const user = useSelector((state) => state?.auth?.user);
